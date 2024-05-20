@@ -40,7 +40,7 @@ const Login = () => {
             localStorage.setItem('token', token);
             
             
-                navigate('/task-manager')
+            navigate('/task-manager')
             
         }catch(err){
             console.error(err.response.data)

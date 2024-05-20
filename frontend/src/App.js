@@ -9,8 +9,10 @@ import Signup from './components/Signup';
 
 function App() {
 
+
   const [isAuthenticated, setIsAuthenticated] = useState(!!localStorage.getItem('token'));
 
+  console.log(isAuthenticated);
   const handleLogin = () => {
     // Simulate authentication logic here
     localStorage.setItem('token', 'sample_token');
