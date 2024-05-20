@@ -14,7 +14,7 @@ const EditTask = () => {
 
   const showTask = async () => {
     try {
-      const { data } = await axios.get(`http://localhost:3000/api/v1/tasks/${id}`);
+      const { data } = await axios.get(`${process.env.REACT_APP_BASE_URL}/api/v1/tasks/${id}`);
       setTask({ name: data.task.name,description:data.task.description, completed: data.task.completed });
     } catch (error) {
       setAlert({ show: true, message: 'Error, please try again', type: 'danger' });
@@ -30,7 +30,7 @@ const EditTask = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      await axios.patch(`http://localhost:3000/api/v1/tasks/${id}`, task);
+      await axios.patch(`${process.env.REACT_APP_BASE_URL}/api/v1/tasks/${id}`, task);
       setAlert({ show: true, message: 'Success, task updated', type: 'success' });
     } catch (error) {
       setAlert({ show: true, message: 'Error, please try again', type: 'danger' });

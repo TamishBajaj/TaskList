@@ -31,7 +31,7 @@ const Login = () => {
       //  console.log(process.env.REACT_APP_BASE_URL)
         e.preventDefault();
         try{
-            const res=await axios.post(`http://localhost:3000/api/v1/users/login`,{email,password});
+            const res=await axios.post(`${process.env.REACT_APP_BASE_URL}/api/v1/users/login`,{email,password});
             console.log("submitted")
             console.log(res.data)
             const { token } = res.data; // Assuming the token is returned in the response data
