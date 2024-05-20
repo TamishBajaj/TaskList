@@ -12,7 +12,7 @@ const TaskManager = () => {
   const showTasks = async () => {
     setLoading(true);
     try {
-      const { data } = await axios.get(`${process.env.REACT_APP_BASE_URL}/api/v1/tasks`);
+      const { data } = await axios.get(`${process.env.REACT_APP_BASE_URL}/tasks`);
       setTasks(data.tasks);
     } catch (error) {
       setAlert({ show: true, message: 'There was an error, please try later.', type: 'danger' });
@@ -26,7 +26,7 @@ const TaskManager = () => {
 
   const addTask = async (taskName,description) => {
     try {
-      await axios.post(`${process.env.REACT_APP_BASE_URL}/api/v1/tasks`, { name: taskName , description:description});
+      await axios.post(`${process.env.REACT_APP_BASE_URL}/tasks`, { name: taskName , description:description});
       showTasks();
       setAlert({ show: true, message: 'Success, task added', type: 'success' });
     } catch (error) {
@@ -37,7 +37,7 @@ const TaskManager = () => {
   const deleteTask = async (id) => {
     setLoading(true);
     try {
-      await axios.delete(`${process.env.REACT_APP_BASE_URL}/api/v1/tasks/${id}`);
+      await axios.delete(`${process.env.REACT_APP_BASE_URL}/tasks/${id}`);
       showTasks();
     } catch (error) {
       setAlert({ show: true, message: 'Error, please try again', type: 'danger' });

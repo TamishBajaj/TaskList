@@ -30,7 +30,7 @@ const EditTask = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      await axios.patch(`${process.env.REACT_APP_BASE_URL}/api/v1/tasks/${id}`, task);
+      await axios.patch(`${process.env.REACT_APP_BASE_URL}/tasks/${id}`, task);
       setAlert({ show: true, message: 'Success, task updated', type: 'success' });
     } catch (error) {
       setAlert({ show: true, message: 'Error, please try again', type: 'danger' });
