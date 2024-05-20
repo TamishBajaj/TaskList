@@ -1,0 +1,65 @@
+/* TaskList.module.css */
+
+.tasksContainer{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+
+  margin-bottom: 20px;
+  /* flex-direction: column;
+  align-items: center; */
+  
+}
+.taskcom{
+  text-decoration: line-through;
+  font-size: 1.5rem;
+}
+
+.singleTask{
+  border: 1px solid black;
+  padding: 20px 60px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+}
+
+.task_li{
+  font-size: 1.8rem;
+}
+
+.taskLinks{
+  display: flex;
+  gap: 40px;
+  margin-top: 20px;
+  
+}
+
+.editLink{
+  font-size: 15px;
+}
+
+.icn{
+  width: 100px;
+  height: 100px;
+}
+
+.desc{
+  margin-top: 20px;
+  font-size: 1.3rem;
+}
+.deleteBtn{
+  padding: 8px 16px;
+  border-radius: 10px;
+  background-color: #836FFF;
+  border: 1px solid;
+  transition: 0.3s ease;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.deleteBtn:hover{
+  transform: scale(1.04);
+  cursor: pointer;
+}

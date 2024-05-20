@@ -1,0 +1,35 @@
+/* TaskManager.module.css */
+
+.taskManagerContainer {
+    width: 90vw;
+    max-width: var(--fixed-width);
+    margin: 0 auto;
+    margin-top: 6rem;
+    padding-bottom: 4rem;
+  }
+  
+  .taskManagerHeader {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .taskManagerHeader h1 {
+    font-size: 2.441rem;
+    font-family: var(--headingFont);
+    font-weight: 400;
+    text-transform: capitalize;
+    letter-spacing: var(--letterSpacing);
+  }
+  
+  .taskManagerContent {
+    background: var(--white);
+    border-radius: var(--borderRadius);
+    box-shadow: var(--shadow-2);
+    padding: 2rem 2.5rem;
+  }
+  
+  .buttonContainer {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  

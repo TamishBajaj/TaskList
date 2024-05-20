@@ -1,0 +1,45 @@
+/* TaskForm.module.css */
+
+.taskForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #E4F1FF;
+  padding: 10px 90px;
+}
+
+.taskForm h1{
+  font-size: 2.7rem;
+  font-weight: 800;
+}
+
+.taskInput{
+  width: 300px;
+  padding: 10px 15px;
+  border: 1px solid black;
+  margin-top: 30px;
+  font-size: 1.3rem;
+}
+
+.formControl{
+  display: flex;
+  flex-direction: column;
+  
+
+}
+.sbmt_btn{
+  margin-top: 20px;
+  padding: 10px 5px;
+  background-color: #15F5BA;
+  color: white;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  border: 1px solid black;
+  transition: 0.3s ease;
+  margin-bottom: 30px;
+}
+
+.sbmt_btn:hover{
+  transform: scale(1.05);
+  cursor: pointer;
+}
