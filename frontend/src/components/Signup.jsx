@@ -24,6 +24,7 @@ const Signup = () => {
   });
 
   const { username, email, password, confirmPassword } = formData;
+  
 
   const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
 
@@ -34,6 +35,7 @@ const Signup = () => {
       return;
     }
     try {
+        console.log(process.env.REACT_APP_BASE_URL);
       const res = await axios.post(`${process.env.REACT_APP_BASE_URL}/users/register`, { username, email, password });
       console.log("submitted");
       console.log(res.data);
